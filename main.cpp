@@ -19,12 +19,13 @@ int main()
     cin>>input;
     if ((input == 'A') || (input == 'a'))  {
       string newitem;
-      cout<<"\nWhat is the item?\n";
+      cout<<"What is the item?\n";
       cin>> newitem;
       if (numItems < 5) {
       list[numItems] = newitem;
       numItems++;
-      cout<<numItems;
+      
+
       }
 
       //doesnt work   
