@@ -22,38 +22,22 @@ int main()
       cout<<"What is the item?\n";
       cin>> newitem;
       if (numItems < 5) {
-      list[numItems] = newitem;
-      numItems++;
-      
-
+        list[numItems] = newitem;
+        numItems++;
       }
 
-      //doesnt work   
-      //cout << "You have " << list.length() - numItems << " spaces left in your list";
-    
-
-   else 
-        { cout<< "You'll need a bigger list!\n";
-        }
+      else 
+      {
+        cout<< "You'll need a bigger list!\n";
+      }
     }
-
-
-
-        }while((input !='Q') && ( input !='q'));
-
-        return 0;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  } 
+  while((input !='Q') && ( input !='q'));
+  cout<<"==ITEMS TO BUY==\n";
+  for (int index=0; index<5; index++) 
+  {
+   cout<<index+1<<" "<<list[index]<<endl;
+  
+  }
+  return 0;
+}
