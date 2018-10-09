@@ -2,12 +2,13 @@
 
 #include<iostream>
 #include<string>
+#include<vector>
 using namespace std;
 
 int main()
 {
-  string list[5]; //array of 5 strings
-  int numItems = 0;
+  vector<string> listvector; //vector of strings
+  string items;
   char input;
   do
   {
@@ -20,24 +21,25 @@ int main()
     if ((input == 'A') || (input == 'a'))  {
       string newitem;
       cout<<"What is the item?\n";
+    
       cin>> newitem;
-      if (numItems < 5) {
-        list[numItems] = newitem;
-        numItems++;
-      }
-
-      else 
-      {
-        cout<< "You'll need a bigger list!\n";
-      }
-    }
-  } 
+    listvector.push_back(items);
+  }
+  }
   while((input !='Q') && ( input !='q'));
-  cout<<"==ITEMS TO BUY==\n";
-  for (int index=0; index<5; index++) 
+  if(listvector.size()==0)
   {
-   cout<<index+1<<" "<<list[index]<<endl;
-  
+   cout<<"No items to buy!\n";
+   }
+  if(listvector.size()>0)
+  { 
+  cout<<"==ITEMS TO BUY==\n";
+      
+      for (int index=0; index < listvector.size(); index++)
+  {
+    cout<<index+1<<" "<<listvector[index]<<endl;
+  }
+
   }
   return 0;
 }
