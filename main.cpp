@@ -8,7 +8,6 @@ using namespace std;
 int main()
 {
   vector<string> listvector; //vector of strings
-  string items;
   char input;
   do
   {
@@ -21,24 +20,26 @@ int main()
     if ((input == 'A') || (input == 'a'))  {
       string newitem;
       cout<<"What is the item?\n";
-    
+
       cin>> newitem;
-    listvector.push_back(items);
-  }
+      listvector.push_back(newitem);
+    }
   }
   while((input !='Q') && ( input !='q'));
   if(listvector.size()==0)
   {
-   cout<<"No items to buy!\n";
-   }
+    cout<<"No items to buy!\n";
+  }
   if(listvector.size()>0)
   { 
-  cout<<"==ITEMS TO BUY==\n";
-      
-      for (int index=0; index < listvector.size(); index++)
-  {
-    cout<<index+1<<" "<<listvector[index]<<endl;
-  }
+    cout<<"==ITEMS TO BUY==\n";
+    int num =1;
+    int index;
+    for (index=0; index < listvector.size(); index++)
+    {
+      cout << num << " "<< listvector[index]<<endl;
+      num++;
+    }
 
   }
   return 0;
