@@ -30,7 +30,7 @@ int main()
     }
     if (((input== 'D') || (input == 'd')) && (listvector.size()!=0))
     {
-    cout<< listvector [listvector.size()-1] << " was deleted from the list .\n";
+    cout<< listvector [listvector.size()-1] << " was deleted from the list.\n";
    listvector.pop_back();
     }
   }
