@@ -19,7 +19,7 @@ int main()
     cout<<"\n (D)elete last item";
   }
     cout<<"\n (Q)uit";
-    cout<<"\nYour choice: ";
+    cout<<"\nYour choice (A/Q): ";
     cin>>input;
     if ((input == 'A') || (input == 'a'))  {
       string newitem;
